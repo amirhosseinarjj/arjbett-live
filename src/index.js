@@ -92,7 +92,9 @@ export default {
         }, 502);
       }
     }
-
+if (url.pathname === "/api/test") {
+  return json({ ok: true, message: "ARJBETT API is working" });
+}
     return env.ASSETS.fetch(request);
   }
 };
