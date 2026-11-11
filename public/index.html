@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="/logo.png"><link rel="manifest" href="/manifest.json"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="ARJBETT"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="theme-color" content="#0b0a08"><title>ARJBETT | داشبورد تحلیل عملکرد فوتبال</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0a08;--card:#1a1814;--line:#6b5420;--gold:#d8ac45;--gold2:#f0d27a;--text:#f3ecd9;--mute:#a39a82;--field:#0c1713;--green:#1a2e26;--W:#d8ac45;--D:#6b6451;--L:#8a3030;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:radial-gradient(ellipse 80% 40% at 25% 0,rgba(216,172,69,.18),transparent 70%),var(--bg);color:var(--text);font-family:"Vazirmatn",Tahoma,sans-serif;line-height:1.8}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px 40px}
+header{display:flex;align-items:center;gap:16px;padding:26px 0 14px}
+.logo{flex:none;height:92px;aspect-ratio:1;border-radius:18px;border:2px solid var(--gold);overflow:hidden;background:#0a1020;box-shadow:0 0 22px rgba(216,172,69,.35)}.logo img{display:block;width:100%;height:100%}.hero{display:block;width:100%;height:auto;border-radius:22px;border:1px solid var(--line);margin:4px 0 18px}
+.brand{direction:ltr;text-align:left;margin-inline-start:auto}
+.brand b{display:block;font-size:30px;letter-spacing:1px;line-height:1.2;text-align:right}
+.brand small{font-size:11px;color:var(--mute);letter-spacing:.5px}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid #2f6b55;border-radius:30px;padding:5px 16px;font-size:13px;color:var(--gold2);margin-bottom:18px}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.pill.ok{border-color:var(--gold)}
+hr{border:0;border-top:1px solid var(--line);margin:0 -18px 26px}
+h1{font-size:clamp(26px,7vw,38px);margin:0 0 10px;font-weight:600;line-height:1.4}
+.lead{color:var(--mute);font-size:14.5px;margin:0 0 22px}
+.btns{display:flex;gap:12px;margin-bottom:26px}
+button{font:inherit;font-size:15px;font-weight:600;border-radius:14px;padding:12px 18px;cursor:pointer;border:1px solid var(--line)}
+.b1{background:var(--gold);color:#1a1200;border-color:var(--gold)}
+.b2{background:var(--green);color:var(--text)}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--gold2);outline-offset:2px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:22px;margin-bottom:22px}
+h2{font-size:19px;margin:0 0 16px;font-weight:600}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-size:13.5px;color:var(--mute);margin-bottom:4px}
+select,input{width:100%;background:var(--field);color:var(--text);border:1px solid var(--line);border-radius:14px;padding:12px;font:inherit;font-size:15px;min-height:50px}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:460px}
+th{color:var(--mute);font-weight:400;padding:10px 6px;border-bottom:2px solid var(--line)}
+td{padding:10px 6px;text-align:center;border-bottom:1px solid #2c2616}
+tr.m{cursor:pointer}
+tr.m:hover td{background:#201d17}
+td.sc{font-weight:800;color:var(--gold2);direction:rtl}
+tr.an td{background:#14120e;text-align:right;color:var(--text);font-size:13px;line-height:1.9}
+.empty{color:var(--mute);text-align:center;padding:26px 0}
+.tag{font-size:12px;padding:2px 10px;border-radius:20px;border:1px solid var(--line)}
+.tag.f{color:var(--gold2)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.st{background:var(--field);border:1px solid var(--line);border-radius:16px;padding:12px 14px}
+.st b{display:block;font-size:22px;color:var(--gold2)}
+.st span{font-size:12.5px;color:var(--mute)}
+.split{display:flex;height:10px;border-radius:6px;overflow:hidden;margin:6px 0 4px;direction:ltr}
+.split i{display:block}
+.chips{display:flex;gap:6px;direction:ltr;margin:8px 0}
+.chip{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-weight:800;font-size:13px;color:#1a1200}
+.chip.W{background:var(--W)}.chip.D{background:var(--D);color:#fff}.chip.L{background:var(--L);color:#fff}
+.txt{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:14.5px}
+.note{font-size:12.5px;color:var(--mute)}.pr{background:var(--field);border:1px solid var(--line);border-radius:20px;padding:16px;margin-bottom:14px}.pr h3{margin:0 0 6px;font-size:17px;font-weight:600;display:flex;justify-content:space-between;gap:8px}.pb{display:flex;height:14px;border-radius:8px;overflow:hidden;margin:8px 0 4px}.pb i{display:block}.pl{display:flex;justify-content:space-between;font-size:13.5px;font-weight:600}.fr{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="logo"><img src="/logo.png" alt="ARJBETT"></div>
+<div class="brand" style="margin:0"><b>ARJBETT</b><small>FOOTBALL ANALYTICS</small></div>
+</header>
+<img class="hero" src="/hero.jpg" alt="ARJBETT Football Analytics">
+<div class="pill" id="pill"><i></i><span id="pt">در انتظار اتصال به سرور</span></div>
+<hr>
+<h1>داشبورد تحلیل عملکرد فوتبال</h1>
+<p class="lead">داده مسابقات، فرم تیم‌ها و روند عملکرد را بررسی کن.<br>این ابزار برای تحلیل ورزشی و آموزشی است؛ نه توصیه شرط‌بندی. احتمال‌ها فقط از آمار محاسبه می‌شوند و تضمین نتیجه نیستند.</p>
+<div class="btns"><button class="b1" id="upd">به‌روزرسانی داده‌ها</button></div>
+
+<section class="card">
+<h2>فیلتر مسابقات</h2>
+<div class="grid">
+<div><label for="lg">مسابقات</label><select id="lg"><option value="PL">Premier League</option><option value="PD">La Liga</option><option value="SA">Serie A</option><option value="BL1">Bundesliga</option><option value="FL1">Ligue 1</option><option value="DED">Eredivisie</option><option value="PPL">Primeira Liga</option><option value="ELC">Championship</option></select></div>
+<div><label for="to">تا تاریخ</label><input type="date" id="to"></div>
+<div><label for="fr">از تاریخ</label><input type="date" id="fr"></div>
+<div><label for="tm">تیم برای تحلیل فرم</label><select id="tm"><option>ابتدا داده‌ها را بارگذاری کن</option></select></div>
+</div>
+</section>
+
+<section class="card">
+<h2>مسابقات دریافت‌شده</h2>
+<div class="scroll"><table><thead><tr><th>تاریخ</th><th>رقابت</th><th>میزبان</th><th>نتیجه</th><th>مهمان</th><th>وضعیت</th></tr></thead><tbody id="rows"></tbody></table></div>
+<p class="note" id="hint"></p></section><section class="card" id="pc"><h2>چه کسی می‌برد؟</h2><div class="grid"><div><label for="ph">میزبان</label><select id="ph"></select></div><div><label for="pa">مهمان</label><select id="pa"></select></div></div><div id="pcx" style="margin-top:16px"></div><p class="note">احتمال‌ها از نتایج واقعی همین فصل محاسبه می‌شوند و تضمین نتیجه نیستند. اگر تیمی بازی کمی انجام داده باشد، دقت پایین است.</p></section><section class="card" id="pu"><h2>بازی‌های پیش‌رو و احتمال برد</h2><div id="pux"></div>
+</section>
+
+<section class="card">
+<h2>خلاصه داده‌ها</h2>
+<div id="sum" class="empty">هنوز داده‌ای دریافت نشده است.</div>
+</section>
+
+<section class="card">
+<h2>تحلیل فرم تیم</h2>
+<div id="team" class="empty">بعد از بارگذاری داده، یک تیم انتخاب کن.</div>
+</section>
+</div>
+
+<script>
+var API_URL="";
+var LEAGUES={};
+var M=[],ST={},$=function(i){return document.getElementById(i)};
+var fa=function(n){return Number(n).toLocaleString("fa-IR",{maximumFractionDigits:1})};
+var API_BASE="";
+function rate(x,g,mu){return(x+3*mu)/(g+3)}
+function hf(){var h=0,a=0,n=0;M.forEach(function(m){if(m.fin){h+=m.hg;a+=m.ag;n++}});var mu=(h+a)/(2*n);return[h/n/mu,a/n/mu]}
+function stats(){ST={};M.forEach(function(m){if(!m.fin)return;[[m.h,m.hg,m.ag],[m.a,m.ag,m.hg]].forEach(function(x){var s=ST[x[0]]||(ST[x[0]]={g:0,gf:0,ga:0});s.g++;s.gf+=x[1];s.ga+=x[2]})})}
+function res(m){return m.hg>m.ag?"W":m.hg<m.ag?"L":"D"}
+function flt(){var l=$("lg").value,f=$("fr").value,t=$("to").value;return M.filter(function(m){return m.lg==l&&(!f||m.d>=f)&&(!t||m.d<=t)}).sort(function(a,b){return b.d<a.d?-1:1})}
+function why(m){if(!m.fin){var pp=predict(m.h,m.a,m.lg);if(pp)return"احتمال آماری: "+m.h+" "+P(pp.ph)+"، مساوی "+P(pp.pd)+"، "+m.a+" "+P(pp.pa)+".";var a=ST[m.h],b=ST[m.a];if(!a||!b)return"بازی هنوز انجام نشده است.";var e=a.gf/a.g+b.gf/b.g;return"بازی هنوز انجام نشده. میانگین گل‌زنی دو تیم در این فصل "+fa(a.gf/a.g)+" و "+fa(b.gf/b.g)+" است؛ جمع آن حدود "+fa(e)+" گل در هر بازی نشان می‌دهد."}
+var t=m.hg+m.ag,r=res(m);return"مجموع گل: "+fa(t)+(t>2.5?" (بالای ۲٫۵)":" (زیر ۲٫۵)")+". "+(m.hg>0&&m.ag>0?"هر دو تیم گل زدند.":"دست‌کم یک تیم گل نزد.")+" نتیجه: "+(r=="W"?"برد "+m.h:r=="L"?"برد "+m.a:"تساوی")+"."+(Math.abs(m.hg-m.ag)>=3?" اختلاف گل زیاد بود.":"")}
+function table(){var R=flt(),tb=$("rows");
+if(!M.length){tb.innerHTML='<tr><td colspan="6" class="empty">هنوز داده‌ای دریافت نشده است.</td></tr>';return}
+if(!R.length){tb.innerHTML='<tr><td colspan="6" class="empty">مسابقه‌ای در این بازه پیدا نشد.</td></tr>';return}
+tb.innerHTML=R.map(function(m,i){return '<tr class="m" data-i="'+i+'"><td>'+new Date(m.d).toLocaleDateString("fa-IR")+'</td><td>'+m.lg.split(" ")[0]+'</td><td>'+m.h+'</td><td class="sc">'+(m.fin?m.hg+" - "+m.ag:"-")+'</td><td>'+m.a+'</td><td><span class="tag'+(m.fin?" f":"")+'">'+(m.fin?"پایان‌یافته":"برنامه‌ریزی‌شده")+'</span></td></tr><tr class="an" hidden><td colspan="6">'+why(m)+'</td></tr>'}).join("");
+$("hint").textContent="روی هر مسابقه بزن تا تحلیل همان بازی را ببینی."}
+function summary(){var R=flt().filter(function(m){return m.fin});if(!R.length){$("sum").className="empty";$("sum").textContent=M.length?"مسابقه‌ی پایان‌یافته‌ای در این بازه نیست.":"هنوز داده‌ای دریافت نشده است.";return}
+var n=R.length,g=0,o=0,b=0,w=0,d=0,l=0;R.forEach(function(m){var t=m.hg+m.ag;g+=t;if(t>2.5)o++;if(m.hg&&m.ag)b++;var r=res(m);r=="W"?w++:r=="D"?d++:l++});
+var p=function(x){return fa(x/n*100)+"٪"};$("sum").className="";
+$("sum").innerHTML='<div class="stats"><div class="st"><b>'+fa(flt().length)+'</b><span>کل مسابقات</span></div><div class="st"><b>'+fa(n)+'</b><span>پایان‌یافته</span></div><div class="st"><b>'+fa(g/n)+'</b><span>میانگین گل هر بازی</span></div><div class="st"><b>'+p(o)+'</b><span>بازی با بالای ۲٫۵ گل</span></div><div class="st"><b>'+p(b)+'</b><span>هر دو تیم گل زدند</span></div><div class="st"><b>'+p(w)+'</b><span>برد میزبان</span></div></div><div class="note" style="margin-top:14px">برد میزبان '+p(w)+' | مساوی '+p(d)+' | برد مهمان '+p(l)+'</div><div class="split"><i style="width:'+w/n*100+'%;background:var(--W)"></i><i style="width:'+d/n*100+'%;background:var(--D)"></i><i style="width:'+l/n*100+'%;background:var(--L)"></i></div>'}
+function teams(){var s=$("tm"),old=s.value;if(!M.length){s.innerHTML="<option>ابتدا داده‌ها را بارگذاری کن</option>";return}
+s.innerHTML=LEAGUES[$("lg").value].map(function(t){return"<option>"+t[0]+"</option>"}).join("");if(old)s.value=old;if(!s.value)s.selectedIndex=0}
+function team(){var box=$("team");if(!M.length){box.className="empty";box.textContent="بعد از بارگذاری داده، یک تیم انتخاب کن.";return}
+var t=$("tm").value,R=flt().filter(function(m){return m.fin&&(m.h==t||m.a==t)}).sort(function(a,b){return a.d<b.d?-1:1});
+if(!R.length){box.className="empty";box.textContent="بازی پایان‌یافته‌ای برای این تیم نیست.";return}
+var w=0,d=0,l=0,gf=0,ga=0,hp=0,ap=0,hn=0,an=0,F=[];
+R.forEach(function(m){var home=m.h==t,x=home?m.hg:m.ag,y=home?m.ag:m.hg,r=x>y?"W":x<y?"L":"D";gf+=x;ga+=y;r=="W"?w++:r=="D"?d++:l++;var pt=r=="W"?3:r=="D"?1:0;home?(hp+=pt,hn++):(ap+=pt,an++);F.push(r)});
+var n=R.length,L5=F.slice(-5),pts=w*3+d,txt=t+" در "+fa(n)+" بازی "+fa(pts)+" امتیاز گرفته ("+fa(pts/n)+" در هر بازی). "+
+(gf/n>ga/n+.5?"خط حمله از دفاع قوی‌تر است.":ga/n>gf/n+.3?"دفاع نقطه‌ضعف اصلی است.":"تعادل حمله و دفاع نزدیک است.")+
+(hn&&an?(hp/hn>ap/an+.5?" نتایج خانگی بهتر از بیرون از خانه است.":ap/an>hp/hn+.5?" نتایج بیرون از خانه بهتر از خانگی است.":" نتایج خانگی و میهمان نزدیک است."):"");
+box.className="";box.innerHTML='<div class="note">۵ بازی اخیر</div><div class="chips">'+L5.map(function(c){return'<span class="chip '+c+'">'+({W:"ب",D:"م",L:"ش"})[c]+'</span>'}).join("")+'</div><div class="stats"><div class="st"><b>'+fa(w)+" - "+fa(d)+" - "+fa(l)+'</b><span>برد - مساوی - باخت</span></div><div class="st"><b>'+fa(gf/n)+" / "+fa(ga/n)+'</b><span>گل زده / خورده در هر بازی</span></div></div><div class="txt">'+txt+'</div>'}
+function P(x){return fa(x*100)+"٪"}
+function poisP(l,k){var p=Math.exp(-l);for(var i=1;i<=k;i++)p*=l/i;return p}
+function form5(t){return M.filter(function(m){return m.fin&&(m.h==t||m.a==t)}).sort(function(a,b){return a.d<b.d?-1:1}).slice(-5).map(function(m){var x=m.h==t?m.hg-m.ag:m.ag-m.hg;return x>0?"W":x<0?"L":"D"})}
+function fpts(F){return F.reduce(function(s,c){return s+(c=="W"?3:c=="D"?1:0)},0)}
+function chipsH(F){return F.map(function(c){return'<span class="chip '+c+'">'+({W:"ب",D:"م",L:"ش"})[c]+'</span>'}).join("")}
+function predict(h,a,lg){var sh=ST[h],sa=ST[a];if(!sh||!sa)return null;var mu=0,g=0;LEAGUES[lg].forEach(function(t){var s=ST[t[0]];if(s){mu+=s.gf;g+=s.g}});mu=mu/g;
+var f1=form5(h),f2=form5(a),adj=(fpts(f1)-fpts(f2))*.01,lh=Math.max(.2,rate(sh.gf,sh.g,mu)*rate(sa.ga,sa.g,mu)/mu*hf()[0]*(1+adj)),la=Math.max(.2,rate(sa.gf,sa.g,mu)*rate(sh.ga,sh.g,mu)/mu*hf()[1]*(1-adj)),x1=0,x2=0,x3=0,best=[0,0],bp=0;
+for(var i=0;i<=8;i++)for(var j=0;j<=8;j++){var q=poisP(lh,i)*poisP(la,j);if(i>j)x1+=q;else if(i==j)x2+=q;else x3+=q;if(q>bp){bp=q;best=[i,j]}}
+var s=x1+x2+x3;return{ph:x1/s,pd:x2/s,pa:x3/s,lh:lh,la:la,best:best,f1:f1,f2:f2,sh:sh,sa:sa}}
+function block(h,a,lg,d){var p=predict(h,a,lg);if(!p)return'<div class="empty">داده کافی نیست.</div>';
+var o=[[p.ph,h],[p.pd,"مساوی"],[p.pa,a]].sort(function(x,y){return y[0]-x[0]}),gap=o[0][0]-o[1][0],
+msg=gap<.08?"بازی نزدیک است و برتری روشنی دیده نمی‌شود.":o[0][1]=="مساوی"?"تساوی کمی محتمل‌تر از برد هر دو تیم است.":o[0][1]+(gap>.25?" با اختلاف قابل‌توجه شانس بیشتری برای برد دارد.":" شانس کمی بیشتری برای برد دارد."),
+H=M.filter(function(m){return m.fin&&m.lg==lg&&((m.h==h&&m.a==a)||(m.h==a&&m.a==h))}).sort(function(x,y){return x.d<y.d?1:-1}),
+hh=H.length?H.map(function(m){return new Date(m.d).toLocaleDateString("fa-IR")+": "+m.h+" "+fa(m.hg)+" - "+fa(m.ag)+" "+m.a}).join(" | "):"دیدار قبلی در این داده ثبت نشده.";
+return'<div class="pr">'+(d?'<div class="note">'+d+'</div>':'')+'<h3><span>'+h+'</span><span class="note">در برابر</span><span>'+a+'</span></h3><div class="pb"><i style="width:'+p.ph*100+'%;background:var(--W)"></i><i style="width:'+p.pd*100+'%;background:var(--D)"></i><i style="width:'+p.pa*100+'%;background:#3b8a6e"></i></div><div class="pl"><span>'+P(p.ph)+'</span><span>مساوی '+P(p.pd)+'</span><span>'+P(p.pa)+'</span></div><div class="txt"><b>'+msg+'</b></div><div class="note" style="margin-top:8px">محتمل‌ترین نتیجه: '+fa(p.best[0])+" - "+fa(p.best[1])+' | گل مورد انتظار: '+fa(p.lh)+" و "+fa(p.la)+'</div><div class="fr"><div><div class="note">فرم '+h+'</div><div class="chips">'+chipsH(p.f1)+'</div><div class="note">میانگین گل زده/خورده: '+fa(p.sh.gf/p.sh.g)+" / "+fa(p.sh.ga/p.sh.g)+'</div></div><div><div class="note">فرم '+a+'</div><div class="chips">'+chipsH(p.f2)+'</div><div class="note">میانگین گل زده/خورده: '+fa(p.sa.gf/p.sa.g)+" / "+fa(p.sa.ga/p.sa.g)+'</div></div></div><div class="note">دیدارهای قبلی: '+hh+'</div></div>'}
+function pred(){var lg=$("lg").value,x=$("ph"),y=$("pa"),A=$("pcx"),U=$("pux");
+if(!M.length){x.innerHTML=y.innerHTML="<option>ابتدا داده‌ها را بارگذاری کن</option>";x.dataset.l="";A.innerHTML=U.innerHTML='<div class="empty">بعد از بارگذاری داده، احتمال برد هر بازی اینجا نشان داده می‌شود.</div>';return}
+if(x.dataset.l!=lg){var o=LEAGUES[lg].map(function(t){return"<option>"+t[0]+"</option>"}).join("");x.innerHTML=y.innerHTML=o;x.selectedIndex=0;y.selectedIndex=1;x.dataset.l=lg}
+A.innerHTML=x.value==y.value?'<div class="empty">دو تیم متفاوت انتخاب کن.</div>':block(x.value,y.value,lg);
+var up=flt().filter(function(m){return!m.fin}).sort(function(a,b){return a.d<b.d?-1:1}).slice(0,8);
+U.innerHTML=up.length?up.map(function(m){return block(m.h,m.a,lg,new Date(m.d).toLocaleDateString("fa-IR"))}).join(""):'<div class="empty">بازی پیش‌رویی در این بازه نیست.</div>'}
+$("lg").closest("section").after($("pc"),$("pu"));$("ph").onchange=$("pa").onchange=pred;
+function all(){table();summary();team();pred()}
+function setPill(t,ok){$("pt").textContent=t;$("pill").className="pill"+(ok?" ok":"")}
+function loadData(){var lg=$("lg").value;setPill("در حال دریافت داده…",false);
+fetch(API_BASE+"/api/matches?competition="+encodeURIComponent(lg)).then(function(r){return r.json().then(function(j){if(!r.ok)throw new Error(j.detail||"خطای سرور");return j})}).then(function(j){M=j.matches;
+var set={},T=[];M.forEach(function(m){[m.h,m.a].forEach(function(t){if(!set[t]){set[t]=1;T.push([t])}})});LEAGUES[lg]=T;
+stats();teams();all();setPill("متصل · "+fa(M.filter(function(m){return m.fin}).length)+" بازی پایان‌یافته (فصل "+(j.season||"جاری")+")",true)}).catch(function(e){M=[];all();setPill(e.message||"اتصال به سرور برقرار نشد",false)})}
+$("upd").onclick=loadData;
+$("lg").onchange=loadData;$("fr").onchange=$("to").onchange=all;$("tm").onchange=team;
+$("rows").onclick=function(e){var r=e.target.closest("tr.m");if(r)r.nextElementSibling.hidden=!r.nextElementSibling.hidden};
+loadData();
+</script>
+</body>
+</html>
